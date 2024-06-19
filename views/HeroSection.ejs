@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+</head>
+
+<body>
+    <section>
+        <h1>Hero Section</h1>
+        <form action="/herosection" method="post" enctype="multipart/form-data">
+            <!-- username -->
+            <div>
+                <input type="text" value="<%= username %>" readonly>
+            </div>
+            <!-- name -->
+            <div>
+                <label for=""></label>
+                <input type="text" placeholder="Name" name="name">
+            </div>
+            <!-- role -->
+            <div>
+                <input type="text" placeholder="Role" name="role">
+                <label for=""></label>
+            </div>
+            <!-- hero description -->
+            <div>
+                <textarea name="heroDescription" id="" cols="30" placeholder="Hero Description"></textarea>
+                <label for=""></label>
+            </div>
+            <!-- profile image name -->
+            <div>
+                <input type="file" name="ProfileImageName" placeholder="Choose File For Profile Image">
+                <label for=""></label>
+            </div>
+            <!-- cv file -->
+            <div>
+                <input type="file" name="cvFileName" placeholder="Upload your cv">
+                <label for=""></label>
+            </div>
+            <input type="submit">
+        </form>
+
+
+
+    </section>
+</body>
+
+</html>

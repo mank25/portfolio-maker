@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+        type="text/css"
+        href="/css/style.css">
+  <title>Portfolio</title>
+</head>
+<body>
+  <% if(data[0].dataValues.HeroSec===true) { %>
+  <Section class="herosection">
+    <div class="herosection__container">
+      <div class="herocontent">
+        <p class="herosubtitle">HELLO</p>
+        <h1 class="herotittle">
+          I'm <span> <%= (data1[0].dataValues.name)? data1[0].dataValues.name:"--Your Name--" %><br> a </span><%= (data1[0].dataValues.role)? data1[0].dataValues.role:"--Your Role--" %>
+        </h1>
+        <p class="herodescription">
+          <%= (data1[0].dataValues.HeroDescription)? data1[0].dataValues.HeroDescription:"--Description--" %>
+        </p>
+        <div class="heroaction__btns">
+          <% if (data1[0].dataValues.CvFileName){ %>
+            <a href="/CV's/<%=data1[0].dataValues.CvFileName%>"><button class="heroportfolio">Download CV</button></a>  
+          <% } else{ %>  
+            <h1>Upload your CV</h1>
+         <% } %>
+        </div>
+      </div>
+      <div class="heroimage">
+        
+        <% if (data1[0].dataValues.ProfileImageName){ %>
+          <img src="/images/<%=data1[0].dataValues.ProfileImageName%>" >  
+        <% } else{ %>  
+          <h1>Profile Image</h1>
+       <% } %>
+      </div>
+    </div>
+   </Section>
+  <%}%>
+
+</body>
+</html>

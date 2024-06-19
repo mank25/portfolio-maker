@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.herosection {
+  background-color: var(--extra-light);
+}
+
+.herosection__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.herocontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.herosubtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.herotitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.herotitle span {
+  font-weight: 600;
+}
+
+.herodescription {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.heroaction__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.heroaction__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.herohire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.herohire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.heroportfolio {
+  color: var(--primary-color);
+}
+
+.heroportfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.heroimage {
+  display: grid;
+  place-items: center;
+}
+
+.heroimage img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+@media (width < 750px) {
+  .herosection__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heroimage {
+    grid-area: 1/1/2/2;
+  }
+
+  .heroaction__btns {
+    margin: auto;
+  }
+}
