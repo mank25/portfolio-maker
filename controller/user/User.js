@@ -93,12 +93,13 @@ const getdashboardCtrl=async(req,res)=>{
 };
     const postHeroSection = async (req,res) => {
     const {username,name,role,heroDescription,ProfileImageName,cvFileName}=await req.body;
-
+    console.log(username,name,role,heroDescription);
     try {
         const result = await HeroSection.update(
-          { name: name , role: role, HeroDescription: heroDescription, ProfileImageName: ProfileImageName, CvFileName : cvFileName},
+          { name: name , role: role, HeroDescription: heroDescription, ProfileImageName: username+".jpg", CvFileName : username+".pdf"},
           { where: { username: username } }
         )
+        await result.save();
       } catch (error) {
            res.json(error)
     }

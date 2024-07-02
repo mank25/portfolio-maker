@@ -2,6 +2,7 @@ const express=require("express");
 const { registerCtrl, loginCtrl, profileCtrl, getregisterCtrl, getloginCtrl, getHeroSection,postHeroSection, getdashboardCtrl } = require("../controller/user/user");
 const { validateToken} = require("../middleware/JWT");
 const cookieParser=require("cookie-parser");
+const {uploadImg} = require("../middleware/multer");
 
 
 const Router=express.Router()
@@ -23,7 +24,7 @@ Router.get("/dashboard",validateToken,getdashboardCtrl);
 
 //edit hero section
 Router.get("/herosection",validateToken,getHeroSection);
-Router.post("/herosection",validateToken,postHeroSection);
+Router.post("/herosection",validateToken,uploadImg,postHeroSection);
 //profile
 Router.get("/profile/:id",profileCtrl);
 

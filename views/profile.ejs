@@ -22,7 +22,7 @@
         </p>
         <div class="heroaction__btns">
           <% if (data1[0].dataValues.CvFileName){ %>
-            <a href="/CV's/<%=data1[0].dataValues.CvFileName%>"><button class="heroportfolio">Download CV</button></a>  
+            <a href="../uploads/cv/<%=data1[0].dataValues.CvFileName%>"><button class="heroportfolio">Download CV</button></a>  
           <% } else{ %>  
             <h1>Upload your CV</h1>
          <% } %>
@@ -31,7 +31,7 @@
       <div class="heroimage">
         
         <% if (data1[0].dataValues.ProfileImageName){ %>
-          <img src="/images/<%=data1[0].dataValues.ProfileImageName%>" >  
+          <img src="../uploads/profileimage/<%=data1[0].dataValues.ProfileImageName%>">  
         <% } else{ %>  
           <h1>Profile Image</h1>
        <% } %>
