@@ -18,11 +18,4 @@ The **Portfolio Maker** is a web application that allows users to easily create 
 ## Prerequisites
 
 - **Node.js** and **npm**
-- **MongoDB** (local or cloud-based, e.g., MongoDB Atlas)
-
-
-
-Ps :
-- Still working in this project here are some snapshots of the work done till now - https://drive.google.com/drive/folders/1hnn6IBDRFyeJ0EEac-3BZaakzpviIkUQ?usp=sharing
-
-- Figma Wireframe of the project - https://www.figma.com/design/atfV34ipw9QMCCntPCVnLq/Untitled?node-id=0-1&node-type=canvas&t=YM5Li2866vOA98xu-0 
+- **MongoDB** (local or cloud-based, e.g., MongoDB Atlas
